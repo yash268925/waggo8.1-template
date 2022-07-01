@@ -1,0 +1,3 @@
+[submodule "site/sys/waggo8"]
+	path = site/sys/waggo8
+	url = https://github.com/abatanx/waggo8.git

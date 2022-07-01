@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  runner:
+    build: ./runner
+    ports:
+      - 8080:80
+    volumes:
+      - ./site:/var/www
