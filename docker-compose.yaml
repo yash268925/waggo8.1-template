@@ -1,6 +1,12 @@
 version: '3'
 
 services:
+  db:
+    build: ./db
+    restart: always
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
   runner:
     build: ./runner
     ports:

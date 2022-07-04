@@ -52,11 +52,11 @@ const WGCONF_REPORTMAIL					=	WGCONF_EMAIL ;
 const WGCONF_SESSION_GCTIME				=	60 * 30;
 
 const WGCONF_DBMS_TYPE					=	'pgsql' ;
-const WGCONF_DBMS_HOST					=	'localhost'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_DBMS_HOST					=	'db'; // Edited by install.php at 2022/07/01 16:21:41
 const WGCONF_DBMS_PORT					=	5432 ;
 const WGCONF_DBMS_DB					=	'waggo'; // Edited by install.php at 2022/07/01 16:21:41
 const WGCONF_DBMS_USER					=	'waggo'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_DBMS_PASSWD				=	'password'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_DBMS_PASSWD				=	'dbpass'; // Edited by install.php at 2022/07/01 16:21:41
 const WGCONF_DBMS_CA					=	'';
 
 define( 'WGCONF_URLBASE', 'http://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] );
