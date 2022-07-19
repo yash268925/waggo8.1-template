@@ -2,14 +2,39 @@ version: '3'
 
 services:
   db:
-    build: ./db
+    build: ./docker/db
     restart: always
-    volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  runner:
-    build: ./runner
+  web:
+    build: ./docker/web
     ports:
       - 8080:80
     volumes:
-      - ./site:/var/www
+      - type: bind
+        source: ./src/pub
+        target: /var/www/pub
+      - type: bind
+        source: ./src/tpl
+        target: /var/www/tpl
+      - type: bind
+        source: ./src/sys/config.php
+        target: /var/www/sys/config.php
+      - type: bind
+        source: ./src/sys/include
+        target: /var/www/sys/include
+
+  waggo:
+    build: ./docker/waggo
+    volumes:
+      - type: bind
+        source: ./src/pub
+        target: /var/www/pub
+      - type: bind
+        source: ./src/tpl
+        target: /var/www/tpl
+      - type: bind
+        source: ./src/sys/config.php
+        target: /var/www/sys/config.php
+      - type: bind
+        source: ./src/sys/include
+        target: /var/www/sys/include

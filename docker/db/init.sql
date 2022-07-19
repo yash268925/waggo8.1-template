@@ -8,4 +8,6 @@ create table post (
   content character varying
 );
 
-insert into post values (1, 'test', 'test content');
+insert into post values
+  (1, 'test', 'test content'),
+  (2, 'hoge', 'hogehoge');
