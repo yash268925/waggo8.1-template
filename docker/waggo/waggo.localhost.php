@@ -16,7 +16,7 @@ const WG_LOGTYPE						=	0 ;
 define( 'WG_ENCODING'					,	mb_internal_encoding() );
 
 const WGCONF_DIR_ROOT					=	WG_INSTALLDIR ;
-const WGCONF_DIR_WAGGO					=	WG_INSTALLDIR . '/sys/waggo8' ;
+const WGCONF_DIR_WAGGO					=	WG_INSTALLDIR . '/sys/waggo8.1' ;
 const WGCONF_DIR_PUB					=	WG_INSTALLDIR . '/pub';
 const WGCONF_DIR_SYS					=	WG_INSTALLDIR . '/sys';
 const WGCONF_DIR_TPL					=	WG_INSTALLDIR . '/tpl';

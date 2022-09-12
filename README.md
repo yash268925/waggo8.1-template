@@ -1,4 +1,4 @@
-# waggo8-template
+# waggo8.1-template
 
 実験用テンプレート
 
