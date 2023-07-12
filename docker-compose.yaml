@@ -1,40 +1,11 @@
-version: '3'
-
 services:
   db:
     build: ./docker/db
-    restart: always
 
-  web:
-    build: ./docker/web
+  app:
+    build: ./docker/app
     ports:
-      - 8080:80
+      - "127.0.0.3:80:80"
+      - "127.0.0.3:5173:5173"
     volumes:
-      - type: bind
-        source: ./src/pub
-        target: /var/www/pub
-      - type: bind
-        source: ./src/tpl
-        target: /var/www/tpl
-      - type: bind
-        source: ./src/sys/config.php
-        target: /var/www/sys/config.php
-      - type: bind
-        source: ./src/sys/include
-        target: /var/www/sys/include
-
-  waggo:
-    build: ./docker/waggo
-    volumes:
-      - type: bind
-        source: ./src/pub
-        target: /var/www/pub
-      - type: bind
-        source: ./src/tpl
-        target: /var/www/tpl
-      - type: bind
-        source: ./src/sys/config.php
-        target: /var/www/sys/config.php
-      - type: bind
-        source: ./src/sys/include
-        target: /var/www/sys/include
+      - "./:/var/www"

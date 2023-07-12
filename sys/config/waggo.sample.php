@@ -1,6 +1,6 @@
 <?php
 /**
- * waggo8 configuration
+ * waggo8.1 configuration
  */
 const WG_DEBUG							=	false ;
 const WG_SQLDEBUG						=	false ;
@@ -8,9 +8,9 @@ const WG_SESSIONDEBUG					=	false ;
 const WG_CONTROLLERDEBUG				=	false ;
 const WG_MODELDEBUG						=	false ;
 const WG_JSNOCACHE						=	false ;
-const WG_INSTALLDIR						=	'/var/www'; // Edited by install.php at 2022/07/01 16:21:41
+const WG_INSTALLDIR						=	'/var/www';
 const WG_LOGDIR							=	WG_INSTALLDIR . "/logs" ;
-const WG_LOGNAME						=	'waggo.localhost.log'; // Edited by install.php at 2022/07/01 16:21:41
+const WG_LOGNAME						=	'waggo.localhost.log';
 const WG_LOGFILE						=	WG_LOGDIR . '/' . WG_LOGNAME ;
 const WG_LOGTYPE						=	0 ;
 define( 'WG_ENCODING'					,	mb_internal_encoding() );
@@ -29,10 +29,10 @@ const WGCONF_DIR_FRAMEWORK				=	WGCONF_DIR_WAGGO . '/framework';
 const WGCONF_DIR_FRAMEWORK_MODEL		=	WGCONF_DIR_FRAMEWORK . '/m';
 const WGCONF_DIR_FRAMEWORK_VIEW8		=	WGCONF_DIR_FRAMEWORK . '/v8';
 const WGCONF_DIR_FRAMEWORK_CONTROLLER 	=	WGCONF_DIR_FRAMEWORK . '/c';
-const WGCONF_DIR_FRAMEWORK_EXT			=	WGCONF_DIR_FRAMEWORK . '/exts';
 const WGCONF_DIR_FRAMEWORK_GAUNTLET		=	WGCONF_DIR_FRAMEWORK . '/gauntlet';
+const WGCONF_DIR_FRAMEWORK_PARAMETERS	=	WGCONF_DIR_FRAMEWORK . '/parameters';
 
-const WGCONF_PEAR						=	'/usr/local/lib/php'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_PEAR						=	'/usr/local/bin/pear';
 const WGCONF_UP_PX						=	640 ;
 
 const WGCONF_SMTP_HOST					=	'localhost' ;
@@ -52,30 +52,30 @@ const WGCONF_REPORTMAIL					=	WGCONF_EMAIL ;
 const WGCONF_SESSION_GCTIME				=	60 * 30;
 
 const WGCONF_DBMS_TYPE					=	'pgsql' ;
-const WGCONF_DBMS_HOST					=	'db'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_DBMS_HOST					=	'db';
 const WGCONF_DBMS_PORT					=	5432 ;
-const WGCONF_DBMS_DB					=	'waggo'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_DBMS_USER					=	'waggo'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_DBMS_PASSWD				=	'dbpass'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_DBMS_DB					=	'waggo';
+const WGCONF_DBMS_USER					=	'waggo';
+const WGCONF_DBMS_PASSWD				=	'waggo';
 const WGCONF_DBMS_CA					=	'';
 
-define( 'WGCONF_URLBASE', 'http://' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] );
+define( 'WGCONF_URLBASE', 'http://' . $_SERVER['SERVER_NAME'] );
 
 const WGCONF_GOOGLEMAPS_X				=	139.767073 ;
 const WGCONF_GOOGLEMAPS_Y				=	35.681304 ;
-const WGCONF_PHPCLI						=	'/usr/local/bin/php'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_CONVERT					=	'/usr/bin/convert'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_FFMPEG						=	'/usr/bin/ffmpeg'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_PHPCLI						=	'/usr/local/bin/php';
+const WGCONF_CONVERT					=	'/usr/bin/convert';
+const WGCONF_FFMPEG						=	'/usr/bin/ffmpeg';
 
-const WGCONF_HASHKEY					=	'&HP-ua.5F&P&ldo`2T|1/{%`q#O1bA<&'; // Edited by install.php at 2022/07/01 16:21:41
-const WGCONF_PASSWORD_HASHKEY			=	'vfX|@0WL[s/l_QbRc{?b>h%C+{8Gf&^o'; // Edited by install.php at 2022/07/01 16:21:41
+const WGCONF_HASHKEY					=	'H3zYI~[QaIz101|jfbj3g8v<6ya4UqFs';
+const WGCONF_PASSWORD_HASHKEY			=	'$NNmR|1w,$B>/w+2e-2{kK>/1;3FzEsH';
 
 global $WGCONF_AUTOLOAD;
 $WGCONF_AUTOLOAD = [
 	WGCONF_DIR_FRAMEWORK_VIEW8,
 	WGCONF_DIR_FRAMEWORK_GAUNTLET,
 	WGCONF_DIR_FRAMEWORK_MODEL,
-	WGCONF_DIR_FRAMEWORK_EXT,
-	WGCONF_DIR_SYS.'/include'
+	WGCONF_DIR_FRAMEWORK_PARAMETERS,
+	WGCONF_DIR_FRAMEWORK,
+	WGCONF_DIR_SYS.'/include',
 ];
-

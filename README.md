@@ -1,9 +1,3 @@
-# waggo8.1-template
+# Waggo8.1開発用テンプレート
 
-実験用テンプレート
-
-## run
-
-```bash
-docker compose up
-```
+プレーンな状態 + dockerで動かせるようにはしてます。

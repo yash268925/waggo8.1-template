@@ -1,1 +1,8 @@
-dist
+node_modules
+.vite
+temporary/*
+!temporary/.gitkeep
+sys/waggo8.1
+sys/config/*
+!sys/config/apache-vhosts.localhost.conf
+!sys/config/waggo.sample.php
